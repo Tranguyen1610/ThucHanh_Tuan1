@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="div">
+
+</body>
+<script>
+    body = document.getElementById("div")
+
+    let lblA = document.createTextNode("A")
+    let lblB = document.createTextNode("B")
+    let lblSum = document.createTextNode("Sum")
+
+    const inputA = document.createElement("input")
+    inputA.setAttribute("id", "txtA")
+    const inputB = document.createElement("input")
+    inputA.setAttribute("id", "txtB")
+
+    const btnClick = document.createElement("button")
+    btnClick.setAttribute("type", "button")
+    btnClick.style.margin = "10px"
+    btnClick.innerText = "Click"
+
+    const result = document.createElement("span")
+    result.setAttribute("id", "res")
+
+
+    body.appendChild(lblA)
+    body.appendChild(inputA)
+    body.appendChild(document.createElement("br"))
+    body.appendChild(document.createElement("br"))
+    body.appendChild(lblB)
+    body.appendChild(inputB)
+    body.appendChild(document.createElement("br"))
+    body.appendChild(document.createElement("br"))
+    body.appendChild(lblSum)
+    body.appendChild(btnClick)
+    body.appendChild(result)
+
+    btnClick.addEventListener("click", () => {
+        let a = inputA.value;
+        let b = inputB.value;
+        result.innerText = a * 1 + b * 1;
+    })
+</script>
+
+</html>
